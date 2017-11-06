@@ -1,2 +1,3 @@
-SELECT characters.species FROM characters
-ORDER BY characters.id DESC LIMIT 1
+UPDATE characters
+SET species = 'Martian'
+WHERE id=(SELECT MAX(id) FROM characters)
