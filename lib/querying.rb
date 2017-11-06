@@ -33,8 +33,8 @@ def select_series_title_with_most_human_characters
 end
 
 def select_character_names_and_number_of_books_they_are_in
-  "SELECT series.title, species FROM characters
+  "SELECT series.title, characters.species FROM characters
    INNER JOIN series
    ON characters.series_id = series.id
-   WHERE "
+   WHERE (SELECT MAX (COUNT(characters.species)) FROM characters) = 'human'"
 end
