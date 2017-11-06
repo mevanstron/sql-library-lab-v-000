@@ -8,4 +8,4 @@ CREATE TABLE series (
 CREATE TABLE subgenres (
   name TEXT,
   id INTEGER PRIMARY KEY
-)
+);
